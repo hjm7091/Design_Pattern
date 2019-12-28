@@ -1,4 +1,4 @@
-## Chapter1 객체지향 모델링
+## 1. 객체지향 모델링
 
 ![chapter1](https://user-images.githubusercontent.com/28583661/71540639-79941a00-2990-11ea-8212-47702dd3a46c.PNG)
 
