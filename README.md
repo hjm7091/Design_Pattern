@@ -106,6 +106,17 @@
   * 해결책1 -> 정적 변수에 인스턴스를 만들어 바로 초기화하는 방법
   * 해결책2 -> 인스턴스를 만드는 메서드에 동기화(synchronized)하는 방법
   
+싱글턴 예제(티켓 발행 프로그램)
+
+![ticket](https://user-images.githubusercontent.com/28583661/71818078-486fc400-30cb-11ea-9ce1-fe9211be2bed.PNG)
+
+* TicketManager : 티켓을 발행할 책임이 있는 클래스. 싱글턴 패턴으로 구현해 유일한 시리얼 번호를 생성한다.
+* Ticket : 티켓 인터페이스. 시리얼 번호를 설정하고 외부에 알려줄 책임이 있다.
+* NormalTicket : 정상적인 시리얼 번호가 있는 티켓
+* NullTicket : 발행할 수 있는 티켓보다 더 많은 티켓을 요구할 때 발행되는 유효하지 못한 티켓
+* UserThread : TicketManager 클래스에게 티켓의 발행을 요구하는 스레드 클래스
+
+  
 * * *
 
 ### 참고 문헌
