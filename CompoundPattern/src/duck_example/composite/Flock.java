@@ -5,17 +5,11 @@ import java.util.Iterator;
 import java.util.List;
 
 import duck_example.duck.Quackable;
-import duck_example.observer.Observable;
 import duck_example.observer.Observer;
 
 public class Flock implements Quackable {
 
-	Observable observable;
 	List<Quackable> quackers = new ArrayList<>();
-	
-	public Flock() {
-		observable = new Observable(this);
-	}
 
 	public void add(Quackable quacker) {
 		this.quackers.add(quacker);
@@ -33,7 +27,6 @@ public class Flock implements Quackable {
 
 	@Override
 	public void registerObserver(Observer observer) {
-		observable.registerObserver(observer);
 		Iterator<Quackable> iterator = quackers.iterator();
 		while(iterator.hasNext()) {
 			Quackable quacker = iterator.next();
@@ -43,7 +36,7 @@ public class Flock implements Quackable {
 
 	@Override
 	public void notifyObservers() {
-		observable.notifyObservers();
+		//nothing
 	}
 	
 	@Override
